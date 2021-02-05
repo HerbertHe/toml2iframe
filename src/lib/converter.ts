@@ -1,4 +1,4 @@
-import transformer from "./transformer"
+import transformer, { domain } from "./transformer"
 
 /**
  * iframe标签转化生成器
@@ -12,7 +12,13 @@ const converter = (
     filters = filters ?? []
     const [keys, attrs, src, textContent] = transformer(content)
 
-    if (filters.length !== 0 && !filters.includes(src[1])) {
+    if (
+        filters.length !== 0 &&
+        !!domain(src[1]) &&
+        !filters.includes(domain(src[1]))
+    ) {
+        return ["", false, keys]
+    } else if (!domain(src[1])) {
         return ["", false, keys]
     }
 

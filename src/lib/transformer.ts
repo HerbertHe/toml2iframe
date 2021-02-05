@@ -24,4 +24,18 @@ const transformer = (content: string): Array<Array<string>> => {
     return [keys, ans, src, textContent]
 }
 
+const domainRegExp = /[https?:]?\/\/(\S[^\/]*)/
+const twiceRegExp = /([^\/\?]*)/
+
+export const domain = (raw: string): string => {
+    const reg = domainRegExp.exec(raw)
+    if (!reg) {
+        const twiceDomain = twiceRegExp.exec(raw) ?? []
+        const res = twiceDomain[1] ?? ""
+        return res
+    } else {
+        return reg[1]
+    }
+}
+
 export default transformer
