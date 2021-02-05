@@ -1,14 +1,9 @@
 const toml2iframe = require("../dist/index")
-console.log(
-    toml2iframe.converter(
-        `src = "www.baidu.com"\n a = "b"\ntextContent="<a></a>"`,
-        ["www.baidu.com"]
-    )
-)
 
-console.log(
-    toml2iframe.filter(
-        `src = "www.baidu.com"\n a = "b"\ntextContent="<a></a>"`,
-        ["www.baidu.com"]
-    )
-)
+const content = `
+src="https://www.baidu.com"
+width="100%"
+height="500"
+`
+
+console.log(toml2iframe.converter(content))

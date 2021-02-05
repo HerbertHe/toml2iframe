@@ -16,7 +16,11 @@ const converter = (
         return ["", false, keys]
     }
 
-    return [`<iframe ${attrs.join(" ")}>${textContent[1]}</iframe>`, true, keys]
+    return [
+        `<iframe ${attrs.join(" ")}>${textContent[1] ?? ""}</iframe>`,
+        true,
+        keys,
+    ]
 }
 
 export default converter
