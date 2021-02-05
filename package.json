@@ -1,9 +1,19 @@
 {
   "name": "toml2iframe",
-  "version": "0.0.1",
+  "description": "A library that can let you use iframe in markdown extra syntax securely!",
+  "version": "0.1.0",
   "main": "dist/index.js",
   "repository": "https://github.com/HerbertHe/toml2iframe.git",
   "author": "HerbertHe <Herbert.He0229@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/HerbertHe/toml2iframe/issues"
+  },
+  "keywords": [
+    "markdown",
+    "iframe",
+    "toml",
+    "toml2iframe"
+  ],
   "license": "MIT",
   "scripts": {
     "dev": "rollup -c -w",
@@ -11,7 +21,9 @@
     "build:prod": "rollup -c",
     "build:types": "tsc --emitDeclarationOnly"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@iarna/toml": "^2.2.5"
+  },
   "devDependencies": {
     "@babel/cli": "^7.12.13",
     "@babel/core": "^7.12.13",
@@ -22,6 +34,7 @@
     "@rollup/plugin-commonjs": "^17.1.0",
     "@rollup/plugin-node-resolve": "^11.1.1",
     "rollup": "^2.38.5",
+    "rollup-plugin-terser": "^7.0.2",
     "typescript": "^4.1.3"
   }
 }
