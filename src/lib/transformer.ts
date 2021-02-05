@@ -1,6 +1,21 @@
 import TOML from "@iarna/toml"
 
-const ValidAttributes = ["src", "height", "width", "textContent"]
+const ValidAttributes = [
+    "src",
+    "height",
+    "width",
+    "textContent",
+    "align",
+    "frameborder",
+    "longdesc",
+    "marginheight",
+    "marginwidth",
+    "name",
+    "sandbox",
+    "scrolling",
+    "seamless",
+    "srcdoc",
+]
 
 const transformer = (content: string): Array<Array<string>> => {
     const afterParse = TOML.parse(content)

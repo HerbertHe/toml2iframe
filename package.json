@@ -1,7 +1,7 @@
 {
   "name": "toml2iframe",
   "description": "A library that can let you use iframe in markdown extra syntax securely!",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "main": "dist/index.js",
   "repository": "https://github.com/HerbertHe/toml2iframe.git",
   "author": "HerbertHe <Herbert.He0229@gmail.com>",
