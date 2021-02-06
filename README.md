@@ -7,7 +7,13 @@
 
 > A library that can let you use iframe in markdown extra syntax securely!
 
+**If you want to use this library in HTML via script tag, plz use [codeblock-iframe](https://github.com/HerbertHe/codeblock-iframe) instead**
+
 [简体中文](./README.CN.md) | [English](./README.md)
+
+## Try it
+
+In the [Demo](https://herberthe.github.io/codeblock-iframe/demo), You can experience how it works!
 
 ## Install
 
@@ -64,11 +70,30 @@ https://www.baidu.com
 
 ## Functions
 
+- iframe Attributes
+
+| Attributes   |
+| ------------ |
+| src          |
+| height       |
+| width        |
+| align        |
+| frameborder  |
+| longdesc     |
+| marginheight |
+| marginwidth  |
+| name         |
+| sandbox      |
+| scrolling    |
+| seamless     |
+| srcdoc       |
+| textContent  |
+
 - Params
 
 | Param   | Type            | Description                                                                         |
 | ------- | --------------- | ----------------------------------------------------------------------------------- |
-| content | `string`        | Iframe's attributes (including textContent for children) using standard TOML syntax |
+| content | `string`        | Iframe's attributes (including `textContent` for children) using standard TOML syntax |
 | filters | `Array<string>` | Allowed domain list (required in `filter` function, **DO NOT WITH Protocol**)         |
 
 - Functions

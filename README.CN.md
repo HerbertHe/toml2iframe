@@ -7,7 +7,13 @@
 
 > 一个可以让你通过markdown拓展语法更加安全使用iframe元素的库
 
+**如果你想直接在HTML中通过script标签引入, 请使用 [codeblock-iframe](https://github.com/HerbertHe/codeblock-iframe) 这个库**
+
 [简体中文](./README.CN.md) | [English](./README.md)
+
+## 体验一下
+
+在这个 [Demo](https://herberthe.github.io/codeblock-iframe/demo) 里, 你可以体验这种转化方式!
 
 ## 安装
 
@@ -64,11 +70,30 @@ https://www.baidu.com
 
 ## 可用函数
 
+- iframe属性
+
+| 属性名       |
+| ------------ |
+| src          |
+| height       |
+| width        |
+| align        |
+| frameborder  |
+| longdesc     |
+| marginheight |
+| marginwidth  |
+| name         |
+| sandbox      |
+| scrolling    |
+| seamless     |
+| srcdoc       |
+| textContent  |
+
 - 参数
 
 | 参数    | 类型            | 说明                                                                              |
 | ------- | --------------- | --------------------------------------------------------------------------------- |
-| content | `string`        | iframe标签的属性 (子组件使用textContent), 使用标准TOML语法书写                    |
+| content | `string`        | iframe标签的属性 (子组件使用`textContent`), 使用标准TOML语法书写                  |
 | filters | `Array<string>` | 允许的域名列表 (在`filter`函数中这个参数需要传入**不要写协议，直接写域名就好了**) |
 
 - 函数
@@ -76,7 +101,7 @@ https://www.baidu.com
 1. `converter(content: string, filters?: Array<string>)`: 转化iframe的属性到iframe标签元素
 2. `filter(content: string, filters: Array<string>)`: 过滤域名
 
-- Outputs
+- 输出
 
 For `converter(content: string, filters?: Array<string>)`: [ 结果, 是否过了过滤, [ 属性的名称 (给debug用的) ] ]
 
